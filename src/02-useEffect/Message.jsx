@@ -1,14 +1,15 @@
-import { useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import propTypes from 'prop-types';
 
 export const Message = ({ message }) => {
 
+    const [coords, setCoords] = useState({ x: 0, y: 0 });
+
     useEffect(() => {
 
-        const onMouseMove = (e) => {
-            const coords = { x: e.x, y: e.y };
-            console.log('coords', coords);
-        };
+        const onMouseMove = (e) =>
+            setCoords({ x: e.x, y: e.y });
+
         window.
             addEventListener('mousemove', onMouseMove);
 
@@ -20,6 +21,7 @@ export const Message = ({ message }) => {
     return (
         <>
             <h5>{message}</h5>
+            <p>{JSON.stringify(coords)}</p>
         </>
     )
 }
