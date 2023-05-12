@@ -1,5 +1,4 @@
 import { useState } from "react";
-import PropTypes from 'prop-types';
 
 export const useCounter = (initialValue) => {
 
@@ -14,12 +13,8 @@ export const useCounter = (initialValue) => {
     }
 
     const reset = () => {
-        setCounter(initialValue);
+        setCounter(0);
     }
 
     return { counter, increment, decrement, reset };
-}
-
-useCounter.propTypes = {
-    initialValue: PropTypes.number.isRequired
 }
