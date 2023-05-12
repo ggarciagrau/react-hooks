@@ -9,9 +9,12 @@ export const useForm = (initialForm = {}) => {
         setData({ ...data, [name]: value });
     }
 
+    const reset = () => setData(initialForm);
+
     return {
         ...data,
         data,
-        update
+        update,
+        reset
     };
 }
