@@ -4,9 +4,17 @@ import propTypes from 'prop-types';
 export const Message = ({ message }) => {
 
     useEffect(() => {
-        console.log("Message component mounted");
 
-        return () => console.log("Message component unmounted");
+        const onMouseMove = (e) => {
+            const coords = { x: e.x, y: e.y };
+            console.log('coords', coords);
+        };
+        window.
+            addEventListener('mousemove', onMouseMove);
+
+        return () => {
+            window.removeEventListener('mousemove', onMouseMove);
+        }
     }, []);
 
     return (
