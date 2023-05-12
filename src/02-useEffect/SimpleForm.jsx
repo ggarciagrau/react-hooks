@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import { Message } from "./Message";
 
 export const SimpleForm = () => {
 
@@ -50,6 +51,11 @@ export const SimpleForm = () => {
                     onChange={(e) => updateFormData(e)}
                 />
             </form>
+
+            {
+                (username === "123") && 
+                <Message message="Username already exists" />
+            }
         </>
     )
 }
