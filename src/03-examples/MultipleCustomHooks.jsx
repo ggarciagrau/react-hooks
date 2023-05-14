@@ -1,5 +1,6 @@
 import { useFetch } from "../hooks/useFetch";
 import { useCounter } from "../hooks/useCounter";
+import { Quote } from "../components/Quote";
 
 export const MultipleCustomHooks = () => {
 
@@ -15,10 +16,7 @@ export const MultipleCustomHooks = () => {
             }
             {
                 data && data.map(({ quote, author }, index) => (
-                    <blockquote className="blockquote text-end" key={index}>
-                        <p className="mb-1">{quote}</p>
-                        <footer className="blockquote-footer">{author}</footer>
-                    </blockquote>
+                    <Quote key={index} quote={quote} author={author}/>
                 ))
             }
             {
