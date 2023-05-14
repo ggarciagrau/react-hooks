@@ -12,9 +12,10 @@ import { Layout } from './05-useLayoutEffect/Layout'
 import { Memorize } from './06-memos/Memorize'
 import { MemorizeHook } from './06-memos/MemorizeHook'
 import { CallbackHook } from './06-memos/CallbackHook'
+import { Super } from './07-memo-task/Super'
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
-    <CallbackHook />
+    <Super />
   </React.StrictMode>,
 )

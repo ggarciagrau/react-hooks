@@ -1,0 +1,3 @@
+useMemo: Para guardar el resultado de una operación costosa evitando que se ejecute con cada re-renderizado.
+useCallback: Para evitar que se re-cree una función con cada re-renderizado.
+memo: Para evitar que un componente se re-renderize cuando no cambian las props pero el estado del padre si cambia.
