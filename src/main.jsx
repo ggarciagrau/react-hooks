@@ -13,11 +13,12 @@ import { Memorize } from './06-memos/Memorize'
 import { MemorizeHook } from './06-memos/MemorizeHook'
 import { CallbackHook } from './06-memos/CallbackHook'
 import { Super } from './07-memo-task/Super'
+import { TodoApp } from './07-useReducer/TodoApp'
 
-import './07-useReducer/intro-reducer';
+// import './07-useReducer/intro-reducer';
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
-    <Super />
+    <TodoApp />
   </React.StrictMode>,
 )
