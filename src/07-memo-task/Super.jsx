@@ -24,7 +24,7 @@ export const Super = () => {
                     <Sub 
                         key={ n }
                         numero={ n }
-                        incrementar={ increment }
+                        increment={ increment }
                     />
                 ))
             }
