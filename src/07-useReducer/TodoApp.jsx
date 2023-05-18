@@ -7,6 +7,7 @@ export const TodoApp = () => {
 
     const {
         todos,
+        nPending,
         handleNewTodo,
         handleRemoveTodo,
         toggleTodo
@@ -14,7 +15,7 @@ export const TodoApp = () => {
 
     return (
         <>
-            <h1>Todo App x, <small>pendientes: x</small></h1>
+            <h1>Todo App {todos.length}, <small>pendientes: {nPending}</small></h1>
             <hr />
 
             <div className="row">

@@ -7,6 +7,8 @@ export const useTodo = (initialState) => {
 
     const [state, dispatch] = useReducer(todoReducer, initialState, init);
 
+    const nPending = state.filter(todo => todo.done != true).length;
+
     useEffect(() => {
 
         localStorage.setItem('todos', JSON.stringify(state || []));
@@ -30,6 +32,7 @@ export const useTodo = (initialState) => {
 
     return {
         todos: state,
+        nPending,
         handleNewTodo,
         handleRemoveTodo,
         toggleTodo
