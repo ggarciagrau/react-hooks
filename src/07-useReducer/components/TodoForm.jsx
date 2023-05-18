@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { useForm } from "../../hooks";
 
-export const TodoForm = ({ dispatch }) => {
+export const TodoForm = ({ handleNewTodo }) => {
 
     const { description, update, reset } = useForm({
         description: ""
@@ -12,7 +12,7 @@ export const TodoForm = ({ dispatch }) => {
 
         if (!description) return;
 
-        dispatch({ type: "ADD_TODO", payload: description });
+        handleNewTodo(description);
 
         reset();
     }
