@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { useForm } from "../../hooks";
 
-export const TodoForm = () => {
+export const TodoForm = ({ dispatch }) => {
 
     const { description, update, reset } = useForm({
         description: ""
@@ -10,9 +10,9 @@ export const TodoForm = () => {
     const onSubmit = (ev) => {
         ev.preventDefault();
 
-        const { target: { description }} = ev;
-
         if (!description) return;
+
+        dispatch({ type: "ADD_TODO", payload: description });
 
         reset();
     }
@@ -24,7 +24,8 @@ export const TodoForm = () => {
                 placeholder="New todo"
                 className="form-control"
                 value={description}
-                onChange={({ target: { value: description } }) => update({ ...description })}
+                name="description"
+                onChange={update}
             />
 
             <button

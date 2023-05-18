@@ -41,7 +41,7 @@ export const TodoApp = () => {
                     <h4>Agregar TODO</h4>
                     <hr />
 
-                    <TodoForm />
+                    <TodoForm dispatch={dispatch} />
                 </div>
             </div>
         </>

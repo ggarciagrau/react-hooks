@@ -1,9 +1,15 @@
-export const todoReducer = ({state, action}) => {
-   switch (action) {
-    case "ADD_TODO":
-        throw new Error('ADD_TODO action not implemented');
-        return state;
-    default:
-        return state;
-   } 
+export const todoReducer = (state, { type, payload }) => {
+
+    switch (type) {
+        case "ADD_TODO":
+            return [
+                ...state, {
+                    id: new Date().getTime(),
+                    description: payload,
+                    done: false
+                }
+            ];
+        default:
+            return state;
+    }
 }
