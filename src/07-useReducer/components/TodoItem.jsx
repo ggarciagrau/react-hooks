@@ -1,4 +1,3 @@
-
 export const TodoItem = ({ id, description, checked, handleRemoveTodo, toggleTodo }) => {
 
     return (

@@ -1,0 +1,23 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Tests for TodoItem Should render by default 1`] = `
+<div>
+  <li
+    class="list-group-item d-flex justify-content-between"
+  >
+    <span
+      class="align-self-center"
+    >
+      Product
+    </span>
+    <input
+      type="checkbox"
+    />
+    <button
+      class="btn btn-danger"
+    >
+      Delete
+    </button>
+  </li>
+</div>
+`;
