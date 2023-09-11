@@ -1,0 +1,85 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Tests for TodoApp Should display the component by default 1`] = `
+<div>
+  <h1>
+    Todo App 
+    2
+    , 
+    <small>
+      pendientes: 
+      2
+    </small>
+  </h1>
+  <hr />
+  <div
+    class="row"
+  >
+    <div
+      class="col-7"
+    >
+      <ul
+        class="list-group"
+      >
+        <li
+          class="list-group-item d-flex justify-content-between"
+        >
+          <span
+            class="align-self-center"
+          >
+            Canary
+          </span>
+          <input
+            type="checkbox"
+          />
+          <button
+            class="btn btn-danger"
+          >
+            Delete
+          </button>
+        </li>
+        <li
+          class="list-group-item d-flex justify-content-between"
+        >
+          <span
+            class="align-self-center"
+          >
+            Budgie
+          </span>
+          <input
+            type="checkbox"
+          />
+          <button
+            class="btn btn-danger"
+          >
+            Delete
+          </button>
+        </li>
+      </ul>
+    </div>
+    <div
+      class="col-5"
+    >
+      <h4>
+        Agregar TODO
+      </h4>
+      <hr />
+      <form>
+        <input
+          class="form-control"
+          name="description"
+          placeholder="New todo"
+          type="text"
+          value=""
+        />
+        <button
+          class="btn btn-outline-primary mt-2"
+          type="submit"
+        >
+          Add
+        </button>
+      </form>
+    </div>
+  </div>
+</div>
+`;
